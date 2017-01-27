@@ -71,8 +71,9 @@ int myprintf(char *fmt, ...) // *** TODO: handle the case where there are more %
 {                            // than *ip's given
   char *cp = fmt;
   int *ip = &fmt + 1;
-  while (*cp != NULL)
+  while (*cp)
     {
+	putchar('l');
       if (*cp == '%')
 	{
 	  *cp++;
